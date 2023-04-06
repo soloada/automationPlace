@@ -22,7 +22,7 @@ public class TopMenuPage {
     @FindBy(css = "#main_menu .menu_account .menu_text")
     public WebElement accountSubMenuOfHomeBtn;
 
-    @FindBy(linkText= "Login or register")
+    @FindBy(linkText= "LoginPage or register")
     public WebElement loginOrRegister;
 
     @FindBy(css = "ul#main_menu_top  .menu_specials.top > .menu_text")

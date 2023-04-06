@@ -1,0 +1,17 @@
+<suite name="Include Exclude Methods Suite">
+    <test name="Mid Jan 2023 Release">
+        <classess>
+            <class name="com.scripts.Test1">
+            <methods>
+                <include name="Testing2"/>
+            </methods>
+            </class>
+            <class name="com.scripts.Test2">
+                <methods>
+                    <exclude name="Te2"/>
+
+                </methods>
+            </class>
+        </classess>
+    </test>
+</suite>

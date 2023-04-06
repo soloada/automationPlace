@@ -1,0 +1,11 @@
+<suite name="Test Execution Suite">
+    <test name="Jan 2023 release">
+        <classes>
+            <class name="com.scripts.ActionClass_Click"/>
+            <class name="com.scripts.Assertion_Url_Title_Wait"/>
+            <class name="com.scripts.Before_And_After_method"/>
+            <class name="com.scripts.Before_N_After_Class"/>
+        </classes>
+    </test>
+
+</suite>

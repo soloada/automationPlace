@@ -24,7 +24,7 @@ public class secondTest {
         wait.until(ExpectedConditions.titleContains("A place to practice your automation skills!"));
         Assert.assertEquals(driver.getCurrentUrl(), "https://www.automationteststore.com/");
         Assert.assertEquals(driver.getTitle(), "A place to practice your automation skills!");
-        WebElement login_Register = driver.findElement(By.linkText("Login or register"));
+        WebElement login_Register = driver.findElement(By.linkText("LoginPage or register"));
         wait.until(ExpectedConditions.visibilityOf(login_Register));
         Assert.assertTrue(login_Register.isDisplayed());
         login_Register.click();
@@ -36,7 +36,7 @@ public class secondTest {
         driver.findElement(By.cssSelector("#loginFrm_password")).sendKeys("webdriverio2");
         driver.findElement(By.linkText("Forgot your password?")).isDisplayed();
         driver.findElement(By.linkText("Forgot your login?")).isDisplayed();
-        driver.findElement(By.cssSelector("[title='Login']")).click();
+        driver.findElement(By.cssSelector("[title='LoginPage']")).click();
         wait.until(ExpectedConditions.titleContains("My Account"));
 
         WebElement welcomeUserMsg = driver.findElement(By.cssSelector("#customer_menu_top .menu_text"));
@@ -69,7 +69,7 @@ public class secondTest {
         wait.until(ExpectedConditions.titleContains("A place to practice your automation skills!"));
         Assert.assertEquals(driver.getCurrentUrl(), "https://www.automationteststore.com/");
         Assert.assertEquals(driver.getTitle(), "A place to practice your automation skills!");
-        WebElement login_Register = driver.findElement(By.linkText("Login or register"));
+        WebElement login_Register = driver.findElement(By.linkText("LoginPage or register"));
         wait.until(ExpectedConditions.visibilityOf(login_Register));
         Assert.assertTrue(login_Register.isDisplayed());
         login_Register.click();
@@ -81,7 +81,7 @@ public class secondTest {
         driver.findElement(By.cssSelector("#loginFrm_password")).sendKeys("webdriverio2");
         driver.findElement(By.linkText("Forgot your password?")).isDisplayed();
         driver.findElement(By.linkText("Forgot your login?")).isDisplayed();
-        driver.findElement(By.cssSelector("[title='Login']")).click();
+        driver.findElement(By.cssSelector("[title='LoginPage']")).click();
         wait.until(ExpectedConditions.titleContains("My Account"));
 
         WebElement welcomeUserMsg = driver.findElement(By.cssSelector("#customer_menu_top .menu_text"));

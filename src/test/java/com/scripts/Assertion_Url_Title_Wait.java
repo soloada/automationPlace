@@ -25,14 +25,14 @@ public class Assertion_Url_Title_Wait {
 
         Assert.assertEquals(driver.getCurrentUrl(),"https://automationteststore.com/");
         Assert.assertEquals(driver.getTitle(),"A place to practice your automation skills!");
-        WebElement login_or_register = driver.findElement(By.linkText("Login or register"));
+        WebElement login_or_register = driver.findElement(By.linkText("LoginPage or register"));
         Assert.assertTrue(login_or_register.isDisplayed());
-        Assert.assertTrue(driver.findElement(By.linkText("Login or register")).isDisplayed());
+        Assert.assertTrue(driver.findElement(By.linkText("LoginPage or register")).isDisplayed());
         wait.until(ExpectedConditions.visibilityOf(login_or_register)).click();
 
         WebElement loginName = driver.findElement(By.cssSelector("input#loginFrm_loginname"));
         WebElement password = driver.findElement(By.cssSelector("input#loginFrm_password"));
-        WebElement eleLoginBtn = driver.findElement(By.cssSelector("button[title='Login']"));
+        WebElement eleLoginBtn = driver.findElement(By.cssSelector("button[title='LoginPage']"));
 
         /*loginName.sendKeys("");
         password.sendKeys("");

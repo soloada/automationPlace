@@ -26,7 +26,7 @@ public class CodeOfHead {
         driver.manage().window().maximize();
         WebDriverWait wait = new WebDriverWait(driver, 15);
         driver.get("https://automationteststore.com/");
-        driver.findElement(By.linkText("Login or register")).click();
+        driver.findElement(By.linkText("LoginPage or register")).click();
         Assert.assertEquals(driver.getCurrentUrl(),"https://automationteststore.com/");
         wait.until(ExpectedConditions.titleContains("A place to practice your automation skills!"));
 

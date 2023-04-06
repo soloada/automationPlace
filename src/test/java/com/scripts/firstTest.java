@@ -92,12 +92,12 @@ public class firstTest {
         //Thread.sleep(2000);
         //driver.findElement(By.id("customer_menu_top")).click();
         //Thread.sleep(2000);
-        //driver.findElement(By.linkText("Login or register")).click();
+        //driver.findElement(By.linkText("LoginPage or register")).click();
         //Thread.sleep(2000);
         //driver.findElement(By.id("loginFrm_loginname")).sendKeys("selenium2022");
         //Thread.sleep(2000);
         //driver.findElement(By.id("loginFrm_password")).sendKeys("selenium2022");
-        //driver.findElement(By.cssSelector("button[title='Login']")).click();
+        //driver.findElement(By.cssSelector("button[title='LoginPage']")).click();
         //driver.findElement(By.cssSelector(".btn.btn-orange.pull-right")).click(); // continue button
         //driver.findElement(By.linkText("Logoff")).click();
         //driver.findElement(By.xpath("//form[@id='accountFrm']//button[@title='Continue']")).click();

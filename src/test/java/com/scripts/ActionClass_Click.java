@@ -1,5 +1,8 @@
 package com.scripts;
 
+import com.AutoExercise.pageObject.HomePage.LoginPage;
+import com.AutoExercise.pageObject.HomePage.ProductPage;
+import com.AutoExercise.pageObject.HomePage.TopMenu;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -20,30 +23,30 @@ public class ActionClass_Click {
         System.setProperty("webdriver.chrome.driver", "C://drivers//d//chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
-        WebDriverWait wait = new WebDriverWait(driver,15);
+        WebDriverWait wait = new WebDriverWait(driver, 15);
 
         driver.get("https://automationteststore.com/");
 
-        Assert.assertEquals(driver.getCurrentUrl(),"https://automationteststore.com/");
-        Assert.assertEquals(driver.getTitle(),"A place to practice your automation skills!");
+        Assert.assertEquals(driver.getCurrentUrl(), "https://automationteststore.com/");
+        Assert.assertEquals(driver.getTitle(), "A place to practice your automation skills!");
         WebElement ele = driver.findElement(By.linkText("Login or register"));
         Assert.assertTrue(ele.isDisplayed());
         wait.until(ExpectedConditions.visibilityOf(ele)).click();
 
-        //WebElement ele = driver.findElement(By.linkText("HOME"));
+        WebElement ele2 = driver.findElement(By.linkText("HOME"));
 
-        //Actions action = new Actions(driver);
-        //action.moveToElement(ele).click().build().perform();
-        //action.moveToElement(ele).perform();
+        Actions action = new Actions(driver);
+        action.moveToElement(ele2).click().build().perform();
+        //action.moveToElement(ele2).perform();
 
 
         //driver.quit();
 
 
-
-        }
-
-
     }
+}
+
+
+
 
 

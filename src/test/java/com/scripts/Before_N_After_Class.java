@@ -2,21 +2,21 @@ package com.scripts;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 
-public class generalTest {
+public class Before_N_After_Class {
     WebDriver driver;
     WebDriverWait wait;
 
-    @BeforeMethod
-    public void setupBrowser(){
+
+    @BeforeClass
+    public void BeforeClassAnnotation () {
          //Creating an object of ChromeDriver
          System.setProperty("webdriver.gecko.driver", "C://drivers//geckodriver.exe");
          driver = new FirefoxDriver();
@@ -24,22 +24,28 @@ public class generalTest {
          wait = new WebDriverWait(driver, 15);
          //driver.manage().deleteAllCookies();
 
-
-    }
-    @Test
-    public void gotoHomePage() {
         driver.get("https://automationteststore.com/");
-        wait.until(ExpectedConditions.titleContains("A place to practice your automation skills!"));
         Assert.assertEquals(driver.getCurrentUrl(), "https://automationteststore.com/");
+        wait.until(ExpectedConditions.titleContains("A place to practice your automation skills!"));
+
 
     }
+
+    @AfterClass
+    public void AfterClassAnnotation () {
+        driver.quit();
+
+    }
+
+
     @Test
     public void loginPage() {
-        //System.out.println("This is test2");
-        driver.findElement(By.linkText("Login or register")).click();
+
+        WebElement login = driver.findElement(By.linkText("Login or register"));
+        wait.until(ExpectedConditions.visibilityOf(login)).click();
         driver.findElement(By.id("loginFrm_loginname")).sendKeys("selenium2022");
         driver.findElement(By.id("loginFrm_password")).sendKeys("selenium2022");
-        driver.findElement(By.cssSelector("button[title='Login']")).click();
+        driver.findElement(By.cssSelector("[title='Login']")).click();
     }
     @Test
     public void test2() {
@@ -60,10 +66,6 @@ public class generalTest {
     }
 
 
-    @AfterMethod
-    public void tearDown(){
-        driver.quit();
 
-    }
 
 }

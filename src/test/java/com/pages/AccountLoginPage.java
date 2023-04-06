@@ -16,7 +16,7 @@ public class AccountLoginPage {
     @FindBy(css = "input#loginFrm_password")
     public WebElement password;
 
-    @FindBy(css = "button[title='Login']")
+    @FindBy(css = "button[title='LoginPage']")
     public WebElement loginBtn;
 
     @FindBy(css = "[title='Continue']")

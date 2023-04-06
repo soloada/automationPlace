@@ -25,14 +25,15 @@ public class WebdriverWait_Click {
 
         Assert.assertEquals(driver.getCurrentUrl(),"https://automationteststore.com/");
         Assert.assertEquals(driver.getTitle(),"A place to practice your automation skills!");
-        WebElement ele = driver.findElement(By.linkText("Login or register"));
+        WebElement ele = driver.findElement(By.linkText("LoginPage or register"));
         Assert.assertTrue(ele.isDisplayed());
-        Assert.assertTrue(driver.findElement(By.linkText("Login or register")).isDisplayed());
+        Assert.assertTrue(driver.findElement(By.linkText("LoginPage or register")).isDisplayed());
         wait.until(ExpectedConditions.visibilityOf(ele)).click();
+
 
         driver.findElement(By.cssSelector("input#loginFrm_loginname")).sendKeys("webdriverio2");
         driver.findElement(By.cssSelector("input#loginFrm_password")).sendKeys("webdriverio2");
-        WebElement eleLoginBtn = driver.findElement(By.cssSelector("button[title='Login']"));
+        WebElement eleLoginBtn = driver.findElement(By.cssSelector("button[title='LoginPage']"));
         wait.until(ExpectedConditions.visibilityOf(eleLoginBtn)).click();
         wait.until(ExpectedConditions.titleContains("My Account"));
         Assert.assertEquals(driver.getCurrentUrl(),"https://automationteststore.com/index.php?rt=account/account");
